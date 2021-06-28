@@ -27,11 +27,13 @@ class User{
     protected $name;
     protected $email;
     protected $age;
+    protected $shoppingList = [];
 
-    function __construct(string $name, string $email, int $age) {
+    function __construct(string $name, string $email, int $age, array $shoppingList) {
         $this->name = $name;
         $this->email = $email;
         $this->age = $age;
+        $this->shoppingList = $shoppingList;
     }
 }
 
@@ -39,8 +41,8 @@ $randomUser = new User('Mike', 'mike@example.com', 35);
 var_dump($randomUser);
 
 class PremiumUser extends User{
-    function __construct(string $name, string $email, int $age, bool $isPremium = true, int $discount = 20) {
-        parent::__construct($name, $email, $age);
+    function __construct(string $name, string $email, int $age, array $shoppingList, bool $isPremium = true, int $discount = 20) {
+        parent::__construct($name, $email, $age, $shoppingList);
         $this->isPremium = $isPremium;
         $this->discount = $discount;
     }
