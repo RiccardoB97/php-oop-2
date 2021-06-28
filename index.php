@@ -37,3 +37,11 @@ class User{
 
 $randomUser = new User('Mike', 'mike@example.com', 35);
 var_dump($randomUser);
+
+class PremiumUser extends User{
+    function __construct(string $name, string $email, int $age, bool $isPremium = true, int $discount = 20) {
+        parent::__construct($name, $email, $age);
+        $this->isPremium = $isPremium;
+        $this->discount = $discount;
+    }
+}
