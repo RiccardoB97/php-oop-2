@@ -2,7 +2,7 @@
 class Product{
     public $name;
     public $price;
-    public $inStock;
+    public $qnty;
 
     function __construct(string $name, int $price, int $qnty) {
         $this->name = $name;
@@ -10,6 +10,30 @@ class Product{
         $this->qnty = $qnty;
     }
 
+    function isInStock(){
+        if($this->qnty > 0){
+            return $this->inStock = true;
+        }
+    }
+
 }
 
 $pc = new Product('Macbook', 1400, 5);
+var_dump($pc);
+var_dump($pc->isInStock());
+
+
+class User{
+    protected $name;
+    protected $email;
+    protected $age;
+
+    function __construct(string $name, string $email, int $age) {
+        $this->name = $name;
+        $this->email = $email;
+        $this->age = $age;
+    }
+}
+
+$randomUser = new User('Mike', 'mike@example.com', 35);
+var_dump($randomUser);
