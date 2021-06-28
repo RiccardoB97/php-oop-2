@@ -35,6 +35,10 @@ class User{
         $this->age = $age;
         $this->shoppingList = $shoppingList;
     }
+
+    function addItemToList($item){
+        $this->shoppingList = array_push($shoppingList, $item);
+    }
 }
 
 $randomUser = new User('Mike', 'mike@example.com', 35, []);
@@ -47,11 +51,8 @@ class PremiumUser extends User{
         $this->discount = $discount;
     }
 
-    function addItemToList($item){
-        $this->shoppingList = array_push($shoppingList, $item);
-    }
 
 }
 
-$premiumUser = new PremiumUser('Riccardo', 'riccardo@example.com', 23, []);
+$premiumUser = new PremiumUser('Riccardo', 'riccardo@example.com', 23,[]);
 var_dump($premiumUser);
