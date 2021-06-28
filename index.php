@@ -37,7 +37,7 @@ class User{
     }
 }
 
-$randomUser = new User('Mike', 'mike@example.com', 35);
+$randomUser = new User('Mike', 'mike@example.com', 35, []);
 var_dump($randomUser);
 
 class PremiumUser extends User{
@@ -46,4 +46,12 @@ class PremiumUser extends User{
         $this->isPremium = $isPremium;
         $this->discount = $discount;
     }
+
+    function addItemToList($item){
+        $this->shoppingList = array_push($shoppingList, $item);
+    }
+
 }
+
+$premiumUser = new PremiumUser('Riccardo', 'riccardo@example.com', 23, []);
+var_dump($premiumUser);
