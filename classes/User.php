@@ -4,17 +4,13 @@ class User{
     protected $name;
     protected $email;
     protected $age;
-    protected $shoppingList = [];
+    protected $password;
 
-    function __construct(string $name, string $email, int $age, array $shoppingList) {
+    function __construct(string $name, string $email, int $age, string $password) {
         $this->name = $name;
         $this->email = $email;
         $this->age = $age;
-        $this->shoppingList = $shoppingList;
-    }
-
-    function buyItem($list, $item){
-        return array_push($list,$item);
+        $this->password = $password;
     }
 
     function getName(){
