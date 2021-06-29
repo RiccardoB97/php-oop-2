@@ -2,9 +2,11 @@
 
 
 class PremiumUser extends User{
-    function __construct(string $name, string $email, int $age, array $shoppingList, bool $isPremium = true, int $discount = 20) {
-        parent::__construct($name, $email, $age, $shoppingList);
+    function __construct(string $name, string $email, int $age, string $password, bool $isPremium = true, int $discount = 20) {
+        parent::__construct($name, $email, $age, $password);
         $this->isPremium = $isPremium;
         $this->discount = $discount;
     }
 }
+?>
+

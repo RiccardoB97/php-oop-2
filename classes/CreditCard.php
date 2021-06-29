@@ -5,9 +5,11 @@ class CreditCard{
     protected $age;
     protected $expiryDate;
 
-    function __construct($name, $age,$expiryDate = 2022) {
+    function __construct($name, $number, $ccv, $expiryDate = 2022) {
         $this->name = $name;
-        $this->age = $age;
+        $this->number = $number;
+        $this->ccv = $ccv;
         $this->expiryDate = $expiryDate;
     }
 }
+?>

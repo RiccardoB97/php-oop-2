@@ -11,10 +11,5 @@ class Product{
         $this->qnty = $qnty;
     }
 
-    function isInStock(){
-        if($this->qnty > 0){
-            return $this->inStock = true;
-        }
-    }
-
 }
+?>
