@@ -31,3 +31,10 @@ trait Score {
         return $this->score;
     }
 }
+
+function checkAge($age){
+    if(! is_int($age)){
+        throw new Exception ('Age must be a number!');
+    }
+    return true;
+}
