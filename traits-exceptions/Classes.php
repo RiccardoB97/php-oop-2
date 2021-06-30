@@ -38,3 +38,12 @@ function checkAge($age){
     }
     return true;
 }
+
+try{
+    checkAge(3);
+    echo 'Age is a number';
+}
+
+catch(Exception $e){
+    echo 'Error, age must be a number'. $e->getMessage();
+}
