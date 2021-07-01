@@ -5,7 +5,9 @@ require __DIR__ . '/classes/PremiumUser.php';
 require __DIR__ . '/classes/CreditCard.php';
 require __DIR__ . '/database/db.php';
 
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
